@@ -12,7 +12,7 @@ PSVITAIP = 192.168.1.27
 all: $(TARGET).$(TYPE)
 
 %.$(TYPE): %.velf
-	vita-make-fself $< $@
+	vita-make-fself -c $< $@
 
 %.velf: %.elf
 	vita-elf-create -n -e exports.yml $< $@
